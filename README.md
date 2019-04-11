@@ -4,7 +4,7 @@ This simple bash script downloads the entire content of a 4chan's thread
 
 ### Prerequisites
 
-To run this script you need to install curl and wget commands
+To run this script you need to install curl and wget commands.
 On Ubuntu/Debian distro type in terminal :
 ```
 sudo apt install curl wget
