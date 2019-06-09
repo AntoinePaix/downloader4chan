@@ -56,7 +56,7 @@ fi
 cd $CONTENT_FOLDER
 
 
-for file in $(curl -s "${THREAD_URL}" | tr " " "\n" | grep "href=\"//i.4cdn.org/*/[[:digit:]]*.[[:lower:]]*" | \
+for file in $(curl -s "${THREAD_URL}" | tr " " "\n" | grep "href=\"//is2.4chan.org/*/[[:digit:]]*.[[:lower:]]*" | \
                 cut -d'=' -f2 | sed -e 's/"//g ; s/\/\///g' | uniq)
 do
     FILE="https://"${file}""
