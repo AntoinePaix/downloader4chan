@@ -17,7 +17,10 @@ THREAD_URL="${1}"
 # Folder where the content are saved (you can modified the path if you want)
 PATH_TO_FOLDER="/home/$USER/4chan"
 
+# ID thread recovery
 FOLDER_NAME=$(basename "$1")
+
+# Creating the directory
 CONTENT_FOLDER="${PATH_TO_FOLDER}/${FOLDER_NAME}"
 
 usage() {
@@ -36,13 +39,13 @@ invalid_url() {
     echo "INVALID URL: URL must have this format (example): https://boards.4channel.org/g/thread/20558626"
 }
 
-regex='https://boards.4channel.org/[[:alnum:]]*/thread/[[:digit:]]*'
-if [[ $THREAD_URL =~ $regex ]]
-then
-    echo "[+] Good URL: ${THREAD_URL}"
-else
-    invalid_url && exit 2
-fi
+#regex='https://boards.4channel.org/[[:alnum:]]*/thread/[[:digit:]]*'
+#if [[ $THREAD_URL =~ $regex ]]
+#then
+#    echo "[+] Good URL: ${THREAD_URL}"
+#else
+#    invalid_url && exit 2
+#fi
 
 # Creating folder
 if [ ! -d "${CONTENT_FOLDER}" ]
